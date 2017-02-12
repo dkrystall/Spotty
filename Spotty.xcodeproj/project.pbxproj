@@ -10,6 +10,11 @@
 		B699A56D1E505C1E0090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
 		B699A56E1E506B3F0090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
 		B699A56F1E506B400090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
+		B699A5851E50CA7C0090AE11 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A5841E50CA7C0090AE11 /* WorkoutTableViewController.swift */; };
+		B699A5871E50CAB30090AE11 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A5861E50CAB30090AE11 /* GetUserData.swift */; };
+		B699A5891E50CB540090AE11 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A5881E50CB540090AE11 /* User.swift */; };
+		B699A58B1E50D0DD0090AE11 /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A58A1E50D0DD0090AE11 /* Lift.swift */; };
+		B699A58D1E50D64E0090AE11 /* WorkoutDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A58C1E50D64E0090AE11 /* WorkoutDescriptionViewController.swift */; };
 		B6ADC4AA1E4FD94A00689EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */; };
 		B6ADC4AC1E4FD94A00689EE3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */; };
 		B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */; };
@@ -44,6 +49,11 @@
 /* Begin PBXFileReference section */
 		B699A5671E5023490090AE11 /* Spotty-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Spotty-Bridging-Header.h"; path = "Spotty/Spotty-Bridging-Header.h"; sourceTree = "<group>"; };
 		B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxCalculator.swift; sourceTree = "<group>"; };
+		B699A5841E50CA7C0090AE11 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
+		B699A5861E50CAB30090AE11 /* GetUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		B699A5881E50CB540090AE11 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B699A58A1E50D0DD0090AE11 /* Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lift.swift; sourceTree = "<group>"; };
+		B699A58C1E50D64E0090AE11 /* WorkoutDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDescriptionViewController.swift; sourceTree = "<group>"; };
 		B6ADC4A61E4FD94A00689EE3 /* Spotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +160,8 @@
 				B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */,
 				B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */,
 				B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */,
+				B699A5841E50CA7C0090AE11 /* WorkoutTableViewController.swift */,
+				B699A58C1E50D64E0090AE11 /* WorkoutDescriptionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */,
+				B699A5861E50CAB30090AE11 /* GetUserData.swift */,
+				B699A5881E50CB540090AE11 /* User.swift */,
+				B699A58A1E50D0DD0090AE11 /* Lift.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -313,10 +328,15 @@
 			files = (
 				B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */,
 				B699A56D1E505C1E0090AE11 /* MaxCalculator.swift in Sources */,
+				B699A5871E50CAB30090AE11 /* GetUserData.swift in Sources */,
+				B699A58D1E50D64E0090AE11 /* WorkoutDescriptionViewController.swift in Sources */,
+				B699A58B1E50D0DD0090AE11 /* Lift.swift in Sources */,
+				B699A5851E50CA7C0090AE11 /* WorkoutTableViewController.swift in Sources */,
 				B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */,
 				B6ADC4E71E4FF90E00689EE3 /* Spotty.xcdatamodeld in Sources */,
 				B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */,
 				B6ADC4AA1E4FD94A00689EE3 /* AppDelegate.swift in Sources */,
+				B699A5891E50CB540090AE11 /* User.swift in Sources */,
 				B6ADC4AC1E4FD94A00689EE3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
