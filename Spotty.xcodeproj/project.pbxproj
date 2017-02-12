@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B699A5671E5023490090AE11 /* Spotty-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Spotty-Bridging-Header.h"; path = "Spotty/Spotty-Bridging-Header.h"; sourceTree = "<group>"; };
 		B6ADC4A61E4FD94A00689EE3 /* Spotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		B6ADC49D1E4FD94A00689EE3 = {
 			isa = PBXGroup;
 			children = (
+				B699A5671E5023490090AE11 /* Spotty-Bridging-Header.h */,
 				B6ADC4A81E4FD94A00689EE3 /* Spotty */,
 				B6ADC4BF1E4FD94A00689EE3 /* SpottyTests */,
 				B6ADC4CA1E4FD94A00689EE3 /* SpottyUITests */,
