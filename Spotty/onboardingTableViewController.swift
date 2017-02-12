@@ -89,7 +89,7 @@ class onboardingTableViewController: UITableViewController {
                         newUser.name = nameTextFIeld.text
                         newUser.setValue(newUser.name, forKey: "name")
                         sex > 0 ? (newUser.sex=1) : (newUser.sex = 0)
-                        newUser.setValue(newUser.sex, forKey: "sex")
+                        newUser.setValue(newUser.sex, forKey: "gender")
                         if let weight = Double(weightTextField.text!){
                             newUser.weight = weight
                             newUser.setValue(newUser.weight, forKey: "weight")

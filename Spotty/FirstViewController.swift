@@ -10,15 +10,17 @@ import UIKit
 import CoreData
 
 class FirstViewController: UIViewController {
-
     @IBOutlet var userName: UILabel!
     var accountMade = false
+    var currentUser:Profile?
+    var genderField:String?
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         if let alreadyMade = UserDefaults.standard.value(forKey: "AccountMadeAlready") as? Bool {
             accountMade = alreadyMade
+            
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -32,7 +34,22 @@ class FirstViewController: UIViewController {
                 for result in results as! [NSManagedObject] {
                     let fetchedUserName = result.value(forKey: "name") as? String
                     userName.text = fetchedUserName
-                    print(userName.text)
+                    if let name = fetchedUserName{
+                        currentUser?.name = name
+                    }
+                    if let fetchedWeight = result.value(forKey: "weight") as? Double{
+                        currentUser?.weight = fetchedWeight
+                    }
+                    if let gender = result.value(forKey: "gender") as? Int{
+                        currentUser?.sex = Int16(gender)
+                        
+                        switch gender
+                        {
+                        case 0 : genderField = "Male"
+                        case 1 : genderField = "Female"
+                        default: genderField = "?"
+                        }
+                    }
                 }
             }
         } catch{
@@ -49,12 +66,12 @@ class FirstViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
