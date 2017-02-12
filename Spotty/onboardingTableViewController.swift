@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class onboardingTableViewController: UITableViewController {
-
+    @IBOutlet var navigation: UINavigationItem!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var appContext:NSManagedObjectContext?
+    @IBOutlet var sexSegmentedControl: UISegmentedControl!
+    @IBOutlet var weightTextField: UITextField!
+    @IBOutlet var heightTextField: UITextField!
+    @IBOutlet var experienceSegmentControl: UISegmentedControl!
+    @IBOutlet var nameTextFIeld: UITextField!
+    @IBOutlet var benchTextField: UITextField!
+    @IBOutlet var squatTextField: UITextField!
+    @IBOutlet var deadliftTextField: UITextField!
+    @IBOutlet var rowTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("setting up table")
+        appContext = appDelegate.persistentContainer.viewContext
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,29 +43,48 @@ class onboardingTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("populating cells")
-        let cell = onboardingTableViewCell()
-        switch indexPath.row{
-            case 0: cell.cellLeftLabel.text?.append("Gender")
-            case 1: cell.cellLeftLabel.text?.append("Weight")
-            case 2: cell.cellLeftLabel.text = "Height"
-            case 3: cell.cellLeftLabel.text = "Experience"
-            default: print("no case matched")
-            
+        switch section{
+        case 0:
+            return 5
+        case 1:
+            return 4
+        default:
+            return 0
         }
-        return cell
     }
     
+    /*
+     * Sex 0 = Male, Sex 1 = Female
+     * Saves the profile to the context
+     */
+    override func viewWillDisappear(_ animated: Bool) {
+        //save context
+        let sex = self.sexSegmentedControl.selectedSegmentIndex
+        let experience:Int16 = Int16(self.experienceSegmentControl.selectedSegmentIndex)
+        do{
+            if let context = appContext{
+                if let newUser = NSEntityDescription.insertNewObject(forEntityName: "Profile", into: context) as? Profile{
+                    newUser.name = nameTextFIeld.text
+                    sex > 0 ? (newUser.sex=1) : (newUser.sex = 0)
+                    if let weight = Double(weightTextField.text!){
+                        newUser.weight = weight
+                        print("Weight set")
+                    }
+                    newUser.experience = experience
+                    print("sex is: \(newUser.sex)")
+                    try context.save()
+                }
+            }
+        }
+        catch {
+            print("Context Invalid")
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

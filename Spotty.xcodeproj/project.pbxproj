@@ -18,6 +18,7 @@
 		B6ADC4DC1E4FE19E00689EE3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */; };
 		B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */; };
 		B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */; };
+		B6ADC4E71E4FF90E00689EE3 /* Spotty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4E51E4FF90E00689EE3 /* Spotty.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewController.swift; sourceTree = "<group>"; };
 		B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewCell.swift; sourceTree = "<group>"; };
+		B6ADC4E61E4FF90E00689EE3 /* Spotty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotty.xcdatamodel; sourceTree = "<group>"; };
+		B6ADC4E81E4FFDA500689EE3 /* Spotty1.0.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Spotty1.0.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +108,13 @@
 		B6ADC4A81E4FD94A00689EE3 /* Spotty */ = {
 			isa = PBXGroup;
 			children = (
+				B6ADC4E41E4FF36200689EE3 /* Model */,
+				B6ADC4E21E4FF29000689EE3 /* Storyboards */,
 				B6ADC4E11E4FE20A00689EE3 /* ViewControllers */,
 				B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */,
-				B6ADC4AF1E4FD94A00689EE3 /* Main.storyboard */,
 				B6ADC4B21E4FD94A00689EE3 /* Assets.xcassets */,
-				B6ADC4B41E4FD94A00689EE3 /* LaunchScreen.storyboard */,
 				B6ADC4B71E4FD94A00689EE3 /* Info.plist */,
-				B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */,
+				B6ADC4E51E4FF90E00689EE3 /* Spotty.xcdatamodeld */,
 			);
 			path = Spotty;
 			sourceTree = "<group>";
@@ -143,6 +146,23 @@
 				B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6ADC4E21E4FF29000689EE3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADC4AF1E4FD94A00689EE3 /* Main.storyboard */,
+				B6ADC4B41E4FD94A00689EE3 /* LaunchScreen.storyboard */,
+				B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B6ADC4E41E4FF36200689EE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +234,7 @@
 					B6ADC4A51E4FD94A00689EE3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FB246WNWUZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B6ADC4BB1E4FD94A00689EE3 = {
@@ -285,6 +306,7 @@
 			files = (
 				B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */,
 				B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */,
+				B6ADC4E71E4FF90E00689EE3 /* Spotty.xcdatamodeld in Sources */,
 				B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */,
 				B6ADC4AA1E4FD94A00689EE3 /* AppDelegate.swift in Sources */,
 				B6ADC4AC1E4FD94A00689EE3 /* FirstViewController.swift in Sources */,
@@ -439,11 +461,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FB246WNWUZ;
 				INFOPLIST_FILE = Spotty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dkrystall.Spotty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotty-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -452,11 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FB246WNWUZ;
 				INFOPLIST_FILE = Spotty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dkrystall.Spotty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotty-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -559,6 +586,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B6ADC4E51E4FF90E00689EE3 /* Spotty.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6ADC4E81E4FFDA500689EE3 /* Spotty1.0.xcdatamodel */,
+				B6ADC4E61E4FF90E00689EE3 /* Spotty.xcdatamodel */,
+			);
+			currentVersion = B6ADC4E81E4FFDA500689EE3 /* Spotty1.0.xcdatamodel */;
+			path = Spotty.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6ADC49E1E4FD94A00689EE3 /* Project object */;
 }
