@@ -14,6 +14,8 @@ class FirstViewController: UIViewController {
     var accountMade = false
     var currentUser:Profile?
     var genderField:String?
+    
+    
     @IBOutlet var suggestionLabel: UILabel!
     override func viewDidLoad() {
         
@@ -28,6 +30,10 @@ class FirstViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
         request.returnsObjectsAsFaults = false
+        let exerciseRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
+        exerciseRequest.returnsObjectsAsFaults = false
+        
+        var lifts = [Lift]()
         
         do{
             let results = try context.fetch(request)
@@ -55,6 +61,27 @@ class FirstViewController: UIViewController {
             }
         } catch{
             print("fetch failed")
+        }
+        do {
+            let results = try context.fetch(exerciseRequest)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    let lift = Lift()
+                    if let fetchedExerciseName = result.value(forKey: "exercise") as? String{
+                        lift.exerciseName = fetchedExerciseName
+                    }
+                    if let fetchedExerciseWeight = result.value(forKey: "weight") as? Double {
+                        lift.exerciseWeight = fetchedExerciseWeight
+                    }
+                    lifts.append(lift)
+                }
+                for lift in lifts {
+                    print (lift.exerciseName.description)
+                    print (lift.exerciseWeight.description)
+                }
+            }
+        } catch {
+            
         }
         
         self.navigationController?.hidesBarsOnTap = true
@@ -85,5 +112,10 @@ class FirstViewController: UIViewController {
     }
     
     
+}
+
+class Lift {
+    public var exerciseName:String = ""
+    public var exerciseWeight:Double = 0
 }
 

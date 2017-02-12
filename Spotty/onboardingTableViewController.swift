@@ -148,8 +148,9 @@ class onboardingTableViewController: UITableViewController {
         //save context
         let sex = self.sexSegmentedControl.selectedSegmentIndex
         let experience:Int16 = Int16(self.experienceSegmentControl.selectedSegmentIndex)
-        createWeights()
+        
         if !accountAlreadyMade{
+            createWeights()
             do{
                 if let context = appContext{
                     if let newUser = NSEntityDescription.insertNewObject(forEntityName: "Profile", into: context) as? Profile{

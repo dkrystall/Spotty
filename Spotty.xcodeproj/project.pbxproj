@@ -62,7 +62,7 @@
 		B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewController.swift; sourceTree = "<group>"; };
 		B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewCell.swift; sourceTree = "<group>"; };
 		B6ADC4E61E4FF90E00689EE3 /* Spotty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotty.xcdatamodel; sourceTree = "<group>"; };
-		B6ADC4E81E4FFDA500689EE3 /* Spotty1.0.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Spotty1.0.xcdatamodel; sourceTree = "<group>"; };
+		B6ADC4E81E4FFDA500689EE3 /* Spotty1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotty1.0.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
