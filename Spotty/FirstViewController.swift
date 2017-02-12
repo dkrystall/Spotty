@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     var accountMade = false
     var currentUser:Profile?
     var genderField:String?
-    
+    var liftsToCalculate = [Lift]()
     
     @IBOutlet var suggestionLabel: UILabel!
     override func viewDidLoad() {
@@ -78,6 +78,7 @@ class FirstViewController: UIViewController {
                 for lift in lifts {
                     print (lift.exerciseName.description)
                     print (lift.exerciseWeight.description)
+                    liftsToCalculate.append(lift)
                 }
             }
         } catch {
@@ -93,6 +94,8 @@ class FirstViewController: UIViewController {
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
         }
+        setupMenu()
+        calculateLifts()
     }
     
     @IBOutlet var deadliftLabel: UILabel!
@@ -109,6 +112,25 @@ class FirstViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func calculateLifts(){
+        deadliftLabel.text = "Dead Lifts"
+        benchLabel.text = "Bench Press"
+        squatLabel.text = "Squats"
+        let calculate = MaxCalculator()
+        for lift in liftsToCalculate{
+            let thisLiftDescription = calculate.recommendedSetsLbs(currMaxRepLbs: lift.exerciseWeight)
+            if lift.exerciseName == "deadlift" {
+                deadliftDescriptionLabel.text = thisLiftDescription
+            }
+            if lift.exerciseName == "bench" {
+                benchDescriptionLabel.text = thisLiftDescription
+            }
+            if lift.exerciseName == "squat" {
+                squatDescriptionLabel.text = thisLiftDescription
+            }
+            print(thisLiftDescription)
+        }
     }
     
     

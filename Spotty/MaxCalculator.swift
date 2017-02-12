@@ -93,7 +93,7 @@ class MaxCalculator {
         }
         
     }
-    public func recommendedSetsLbs(currMaxRepLbs: Int) -> String {
+    public func recommendedSetsLbs(currMaxRepLbs: Double) -> String {
         
         //    3 x 10 @ 75% - Three sets of 10 reps at 75% of the 1RM
         //    8/80%, 6/85%, 6/85%, 4/90% - Eight reps at 80%, two sets of six reps at 85%, and four reps at 90% of the 1RM
