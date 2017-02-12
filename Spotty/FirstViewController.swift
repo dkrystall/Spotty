@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     var accountMade = false
     var currentUser:Profile?
     var genderField:String?
+    @IBOutlet var suggestionLabel: UILabel!
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -65,6 +66,17 @@ class FirstViewController: UIViewController {
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    @IBOutlet var deadliftLabel: UILabel!
+    @IBOutlet var deadliftDescriptionLabel: UILabel!
+    @IBOutlet var benchLabel: UILabel!
+    @IBOutlet var benchDescriptionLabel: UILabel!
+    @IBOutlet var squatLabel: UILabel!
+    @IBOutlet var squatDescriptionLabel: UILabel!
+    
+    func setupMenu(){
+        suggestionLabel.text = "Based on your 1 Rep Max, Here is our suggested strength workout"
     }
     
     override func didReceiveMemoryWarning() {

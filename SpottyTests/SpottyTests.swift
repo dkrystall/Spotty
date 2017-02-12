@@ -10,7 +10,7 @@ import XCTest
 @testable import Spotty
 
 class SpottyTests: XCTestCase {
-    
+    let maxCalc = MaxCalculator()
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,6 +31,12 @@ class SpottyTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    func testMaxUpperBodyCalculation(){
+        let result = maxCalc.setWarningLbs(currWeight: 22.00, oneMaxRepLbs: 34.0, numOfReps: 4)
+        print("Max rep is: \(result.description)")
+        let shouldBeResult = "Safe Set"
+        assert(shouldBeResult == result.description)
     }
     
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B699A56D1E505C1E0090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
+		B699A56E1E506B3F0090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
+		B699A56F1E506B400090AE11 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */; };
 		B6ADC4AA1E4FD94A00689EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */; };
 		B6ADC4AC1E4FD94A00689EE3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */; };
 		B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */; };
@@ -40,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		B699A5671E5023490090AE11 /* Spotty-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Spotty-Bridging-Header.h"; path = "Spotty/Spotty-Bridging-Header.h"; sourceTree = "<group>"; };
+		B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxCalculator.swift; sourceTree = "<group>"; };
 		B6ADC4A61E4FD94A00689EE3 /* Spotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		B6ADC4E41E4FF36200689EE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B699A56C1E505C1E0090AE11 /* MaxCalculator.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */,
+				B699A56D1E505C1E0090AE11 /* MaxCalculator.swift in Sources */,
 				B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */,
 				B6ADC4E71E4FF90E00689EE3 /* Spotty.xcdatamodeld in Sources */,
 				B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */,
@@ -319,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B699A56E1E506B3F0090AE11 /* MaxCalculator.swift in Sources */,
 				B6ADC4C11E4FD94A00689EE3 /* SpottyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B699A56F1E506B400090AE11 /* MaxCalculator.swift in Sources */,
 				B6ADC4CC1E4FD94A00689EE3 /* SpottyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
