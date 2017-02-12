@@ -78,13 +78,15 @@ class onboardingTableViewController: UITableViewController {
      * Sex 0 = Male, Sex 1 = Female
      * Saves the profile to the context
      */
-//    func createWeights(){
-//        if let benchText = benchTextField.text{
-//            let benchWeight = Double(benchtext)
-//        }
-//        if let squatText = squatTextField.text{
-//        let squatWeight = Double(squatTextField.text)
-//    }
+    func createWeights(){
+        if let benchText = benchTextField.text{
+            let benchWeight = Double(benchText)
+            
+        }
+        if let squatText = squatTextField.text{
+            let squatWeight = Double(squatTextField.text!)
+        }
+    }
     override func viewWillDisappear(_ animated: Bool) {
         //save context
         let sex = self.sexSegmentedControl.selectedSegmentIndex
