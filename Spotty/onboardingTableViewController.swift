@@ -46,22 +46,19 @@ class onboardingTableViewController: UITableViewController {
                 UserDefaults.standard.setValue(true, forKey: "AccountMadeAlready")
             }
         } catch {
-            print("erro")
+            print("error")
         }
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         switch section{
@@ -73,24 +70,85 @@ class onboardingTableViewController: UITableViewController {
             return 0
         }
     }
-    
     /*
      * Sex 0 = Male, Sex 1 = Female
      * Saves the profile to the context
      */
     func createWeights(){
+        
         if let benchText = benchTextField.text{
-            let benchWeight = Double(benchText)
-            
-        }
-        if let squatText = squatTextField.text{
-            let squatWeight = Double(squatTextField.text!)
+            if let context = appContext{
+                do{
+                    let benchWeight = Double(benchText)
+                    if let newExercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as? Exercise {
+                        newExercise.exercise = "bench"
+                        newExercise.setValue(newExercise.exercise, forKey: "exercise")
+                        newExercise.weight = benchWeight!
+                        newExercise.setValue(newExercise.weight, forKey: "weight")
+                        try context.save()
+                    }
+                }catch {
+                    print("Failed to save bench")
+                }
+            }
+            if let squatText = squatTextField.text{
+                if let context = appContext{
+                    do{
+                        let squatWeight = Double(squatText)
+                        if let newExercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as? Exercise {
+                            newExercise.exercise = "squat"
+                            newExercise.setValue(newExercise.exercise, forKey: "exercise")
+                            newExercise.weight = squatWeight!
+                            newExercise.setValue(newExercise.weight, forKey: "weight")
+                            try context.save()
+                        }
+                    }
+                    catch {
+                        print("Failed to save squat")
+                    }
+                }
+            }
+            if let deadliftText = deadliftTextField.text{
+                if let context = appContext{
+                    do{
+                        let deadliftWeight = Double(deadliftText)
+                        if let newExercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as? Exercise {
+                            newExercise.exercise = "deadlift"
+                            newExercise.setValue(newExercise.exercise, forKey: "exercise")
+                            newExercise.weight = deadliftWeight!
+                            newExercise.setValue(newExercise.weight, forKey: "weight")
+                            try context.save()
+                        }
+                    }
+                    catch {
+                        print("failed to save deadlift")
+                    }
+                }
+            }
+            if let rowText = rowTextField.text{
+                if let context = appContext{
+                    do{
+                        let rowWeight = Double(rowText)
+                        if let newExercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as? Exercise {
+                            newExercise.exercise = "row"
+                            newExercise.setValue(newExercise.exercise, forKey: "exercise")
+                            newExercise.weight = rowWeight!
+                            newExercise.setValue(newExercise.weight, forKey: "weight")
+                            try context.save()
+                        }
+                        
+                    } catch {
+                        print("Failed to save row")
+                    }
+                }
+            }
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
         //save context
         let sex = self.sexSegmentedControl.selectedSegmentIndex
         let experience:Int16 = Int16(self.experienceSegmentControl.selectedSegmentIndex)
+        createWeights()
         if !accountAlreadyMade{
             do{
                 if let context = appContext{
