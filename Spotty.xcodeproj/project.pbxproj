@@ -15,6 +15,9 @@
 		B6ADC4B61E4FD94A00689EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADC4B41E4FD94A00689EE3 /* LaunchScreen.storyboard */; };
 		B6ADC4C11E4FD94A00689EE3 /* SpottyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4C01E4FD94A00689EE3 /* SpottyTests.swift */; };
 		B6ADC4CC1E4FD94A00689EE3 /* SpottyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4CB1E4FD94A00689EE3 /* SpottyUITests.swift */; };
+		B6ADC4DC1E4FE19E00689EE3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */; };
+		B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */; };
+		B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B6ADC4C71E4FD94A00689EE3 /* SpottyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpottyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADC4CB1E4FD94A00689EE3 /* SpottyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpottyUITests.swift; sourceTree = "<group>"; };
 		B6ADC4CD1E4FD94A00689EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewController.swift; sourceTree = "<group>"; };
+		B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,13 @@
 		B6ADC4A81E4FD94A00689EE3 /* Spotty */ = {
 			isa = PBXGroup;
 			children = (
+				B6ADC4E11E4FE20A00689EE3 /* ViewControllers */,
 				B6ADC4A91E4FD94A00689EE3 /* AppDelegate.swift */,
-				B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */,
-				B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */,
 				B6ADC4AF1E4FD94A00689EE3 /* Main.storyboard */,
 				B6ADC4B21E4FD94A00689EE3 /* Assets.xcassets */,
 				B6ADC4B41E4FD94A00689EE3 /* LaunchScreen.storyboard */,
 				B6ADC4B71E4FD94A00689EE3 /* Info.plist */,
+				B6ADC4DB1E4FE19E00689EE3 /* Onboarding.storyboard */,
 			);
 			path = Spotty;
 			sourceTree = "<group>";
@@ -126,6 +132,17 @@
 				B6ADC4CD1E4FD94A00689EE3 /* Info.plist */,
 			);
 			path = SpottyUITests;
+			sourceTree = "<group>";
+		};
+		B6ADC4E11E4FE20A00689EE3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADC4AB1E4FD94A00689EE3 /* FirstViewController.swift */,
+				B6ADC4DF1E4FE20600689EE3 /* onboardingTableViewCell.swift */,
+				B6ADC4DD1E4FE1E100689EE3 /* onboardingTableViewController.swift */,
+				B6ADC4AD1E4FD94A00689EE3 /* SecondViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +258,7 @@
 				B6ADC4B61E4FD94A00689EE3 /* LaunchScreen.storyboard in Resources */,
 				B6ADC4B31E4FD94A00689EE3 /* Assets.xcassets in Resources */,
 				B6ADC4B11E4FD94A00689EE3 /* Main.storyboard in Resources */,
+				B6ADC4DC1E4FE19E00689EE3 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6ADC4E01E4FE20600689EE3 /* onboardingTableViewCell.swift in Sources */,
+				B6ADC4DE1E4FE1E100689EE3 /* onboardingTableViewController.swift in Sources */,
 				B6ADC4AE1E4FD94A00689EE3 /* SecondViewController.swift in Sources */,
 				B6ADC4AA1E4FD94A00689EE3 /* AppDelegate.swift in Sources */,
 				B6ADC4AC1E4FD94A00689EE3 /* FirstViewController.swift in Sources */,
@@ -518,6 +538,7 @@
 				B6ADC4D21E4FD94A00689EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6ADC4D31E4FD94A00689EE3 /* Build configuration list for PBXNativeTarget "SpottyTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +547,7 @@
 				B6ADC4D51E4FD94A00689EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6ADC4D61E4FD94A00689EE3 /* Build configuration list for PBXNativeTarget "SpottyUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +556,7 @@
 				B6ADC4D81E4FD94A00689EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
