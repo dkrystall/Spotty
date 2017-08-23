@@ -18,11 +18,11 @@ class WorkoutDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let calculator = MaxCalculator()
-        if lift != nil {
-            print(lift?.exerciseName)
-            print(lift?.exerciseWeight)
-            exerciseLabel.text = lift?.exerciseName
-            exerciseDescriptionLabel.text = calculator.recommendedSetsLbs(currMaxRepLbs: (lift?.exerciseWeight)!)
+        if let thisLift = lift{
+            print(thisLift.exerciseName)
+            print(thisLift.exerciseWeight)
+            exerciseLabel.text = thisLift.exerciseName
+            exerciseDescriptionLabel.text = calculator.recommendedSetsLbs(currMaxRepLbs: (thisLift.exerciseWeight))
         }
 
         // Do any additional setup after loading the view.
